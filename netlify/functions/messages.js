@@ -65,6 +65,7 @@ exports.handler = function (event, context, callback) {
   };
 
   adapter.processActivity(req, res, async (context) => {
+    console.log('context', context);
     // Process bot activity
     await botActivityHandler.run(context);
   });
