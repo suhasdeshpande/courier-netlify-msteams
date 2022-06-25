@@ -1,6 +1,11 @@
 const { BotFrameworkAdapter } = require("botbuilder");
 const { BotActivityHandler } = require("../lib/botActivityHandler");
 
+console.log('stuff', {
+  appId: process.env.MSTEAMS_APP_ID,
+  appPassword: process.env.MSTEAMS_APP_PASSWORD
+});
+
 const adapter = new BotFrameworkAdapter({
   appId: process.env.MSTEAMS_APP_ID,
   appPassword: process.env.MSTEAMS_APP_PASSWORD
